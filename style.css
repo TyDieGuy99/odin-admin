@@ -20,19 +20,39 @@ div {
 }
 
 .header {
-
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1em;
 }
 
 .sidebar {
     grid-row: 1 / 4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     padding: 1em;
 }
 
+.sidebar>img,
+.sidebar>h1,
+.header>img,
+.header>h3,
+.header>button,
+.footer>img,
+.footer>h3,
+.main>h1,
+.main>div {
+    border: 2px solid red;
+}
+
 .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1em;
 }
