@@ -15,7 +15,9 @@ body {
     height: 100%;
 }
 
-div {
+.header,
+.footer,
+.main {
     border: 2px solid black;
 }
 
@@ -29,12 +31,28 @@ div {
 .sidebar {
     grid-row: 1 / 4;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1em;
+    grid-template-rows: 0.3fr minmax(25px, 30px) repeat(6, minmax(50px, 100px)) minmax(25px, 30px) repeat(3, minmax(50px, 100px));
+    padding-left: 1em;
+    padding-right: 5em;
+    background-color: whitesmoke;
 }
 
-.sidebar>img,
-.sidebar>h1,
+.sidebarItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    font-size: 12px;
+}
+
+hr.dashed {
+    border-top: 3px dashed black;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 1em;
+}
+
 .header>img,
 .header>h3,
 .header>button,
