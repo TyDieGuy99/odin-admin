@@ -23,9 +23,73 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
+    row-gap: 1em;
     padding: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.searchbar,
+.userInfo,
+.helloMessage,
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    gap: 1em;
+}
+
+input {
+    border-radius: 25px;
+    width: 30em;
+    height: 3em;
+    font-size: 18px;
+}
+
+.userInfo {
+    justify-content: flex-end;
+    padding-right: 3em;
+    gap: 3em;
+}
+
+.helloMessage {
+    font-size: 22px;
+    gap: 3em;
+}
+
+.pfpWrapper {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    border: 2px solid black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.helloMessage>.pfpWrapper {
+    width: 100px;
+    height: 100px;
+}
+
+.pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    height: 4em;
+    width: 10em;
+    border-radius: 35px;
+}
+
+.buttons {
+    justify-content: space-evenly;
 }
 
 .sidebar {
