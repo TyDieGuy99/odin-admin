@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 2px solid red; */
 }
 
 body {
@@ -10,8 +11,8 @@ body {
 
 #container {
     display: grid;
-    grid-template-rows: 0.75fr 3fr 0.25fr;
-    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 0.75fr minmax(200px, 1000px) minmax(50px, 3em);
+    grid-template-columns: minmax(200px, min-content) minmax(2em, auto);
     height: 100%;
 }
 
@@ -25,10 +26,9 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    row-gap: 1em;
     padding: 1em;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .searchbar,
@@ -62,8 +62,8 @@ input {
 }
 
 .pfpWrapper {
-    width: 75px;
-    height: 75px;
+    width: 55px;
+    height: 55px;
     border-radius: 100%;
     border: 2px solid black;
     overflow: hidden;
@@ -72,8 +72,8 @@ input {
 }
 
 .helloMessage>.pfpWrapper {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 .pfp {
@@ -117,35 +117,30 @@ hr.dashed {
     margin-top: 1em;
 }
 
-.header>img,
-.header>h3,
-.header>button,
-.footer>img,
-.footer>h3,
-.main>h1,
-.main>div,
-.projects,
-.project {
-    border: 2px solid red;
+.announcementContainer>hr.dashed {
+    margin-bottom: 1em;
 }
 
 .main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: minmax(400px, auto);
 }
 
 .mainProject {
-    display: grid;
-    grid-template-rows: 0.5fr 5fr;
+    display: flex;
+    flex-direction: column;
     padding: 1em;
+    gap: 1em;
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    row-gap: 1em;
-    column-gap: 1em;
+    row-gap: 2em;
+    column-gap: 2em;
+    flex: 1;
 }
 
 .project {
@@ -160,10 +155,56 @@ hr.dashed {
 }
 
 .links {
-    grid-column: 2;
+    display: flex;
+    grid-column: span 2;
     grid-row: 3;
     justify-self: end;
     align-self: end;
+    gap: 2em;
+}
+
+.extra {
+    display: grid;
+    padding: 1em;
+    row-gap: 2em;
+    grid-template-rows:  minmax(0, max-content) minmax(min-content, max-content);
+}
+
+.announcementContainer,
+.trendingContainer,
+.project {
+    border-radius: 10px;
+    background-color: gray;
+    padding: 2em;
+    overflow: hidden;
+}
+
+.announcementContainer {
+    overflow-y: hidden;
+}
+
+.trendingContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-auto-rows: 25px;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.trendingContainer>.pfpWrapper {
+    grid-row: span 2;
+}
+
+.trendingContainer>p {
+    margin-top: -20px;
+}
+
+.announcements,
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-right: 3em;
 }
 
 .footer {
@@ -175,4 +216,8 @@ hr.dashed {
 #githubLogo {
     max-height: 100%;
     object-fit: contain;
+}
+
+p {
+    font-size: 1.25rem;
 }
