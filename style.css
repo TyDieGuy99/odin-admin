@@ -1,3 +1,25 @@
+:root {
+    --bg-primary: #1a1a1a;
+    --bg-seconday: #2d2d2d;
+    --bg-teritary: #3a3a3a;
+    --bg-hover: #404040;
+
+    --txt-primary: #ffffff;
+    --txt-secondary: #b3b3b3;
+    --txt-muted: #808080;
+
+    --accent-primary: #0ea5e9;
+    --accent-secondary: #10b981;
+
+    --border-primary: #404040;
+    --border-secondary: #525252;
+    --border-accent: #0ea5e9;
+
+    --sidebar-bg: #1f1f1f;
+    --sidebar-item-hover: #2d2d2d;
+    --sidebar-item-active: #0ea5e9;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +29,8 @@
 
 body {
     height: 100vh;
+    background-color: var(--bg-primary);
+    color: var(--txt-primary);
 }
 
 #container {
@@ -16,12 +40,6 @@ body {
     height: 100%;
 }
 
-.header,
-.footer,
-.main {
-    border: 2px solid black;
-}
-
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -29,6 +47,7 @@ body {
     padding: 1em;
     padding-left: 3em;
     padding-right: 3em;
+    background-color: var(--bg-seconday);
 }
 
 .searchbar,
@@ -44,10 +63,18 @@ body {
 }
 
 input {
-    border-radius: 25px;
+    border-radius: 4px;
     width: 30em;
     height: 3em;
     font-size: 18px;
+    background-color: var(--bg-teritary);
+    border: 1px solid var(--border-primary);
+    color: var(--txt-primary);
+}
+
+input:focus {
+    border-color: var(--border-accent);
+    outline: none;
 }
 
 .userInfo {
@@ -65,7 +92,7 @@ input {
     width: 55px;
     height: 55px;
     border-radius: 100%;
-    border: 2px solid black;
+    border: 2px solid var(--txt-secondary);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -85,7 +112,16 @@ input {
 button {
     height: 4em;
     width: 10em;
-    border-radius: 35px;
+    border-radius: 6px;
+    border: none;
+    cursor: default;
+    background-color: var(--accent-primary);
+    color: var(--txt-primary);
+}
+
+button:hover {
+    background-color: #0284c7;
+    
 }
 
 .buttons {
@@ -96,16 +132,17 @@ button {
     grid-row: 1 / 4;
     display: grid;
     grid-template-rows: 0.3fr minmax(25px, 30px) repeat(6, minmax(50px, 100px)) minmax(25px, 30px) repeat(3, minmax(50px, 100px));
-    padding-left: 1em;
-    padding-right: 5em;
-    background-color: whitesmoke;
+    background-color: var(--sidebar-bg);
 }
 
 .sidebarItem {
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 1em;
+    padding-right: 5em;
     gap: 2em;
+    color: var(--txt-secondary);
     font-size: 12px;
 }
 
@@ -140,7 +177,7 @@ hr.dashed {
     grid-template-rows: repeat(3, 1fr);
     row-gap: 2em;
     column-gap: 2em;
-    flex: 1;
+    flex: 1; 
 }
 
 .project {
@@ -174,13 +211,32 @@ hr.dashed {
 .trendingContainer,
 .project {
     border-radius: 10px;
-    background-color: gray;
+    border: 1px solid var(--border-primary);
+    background-color: var(--bg-seconday);
     padding: 2em;
     overflow: hidden;
 }
 
 .announcementContainer {
     overflow-y: hidden;
+}
+
+.announcementItem {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-primary);
+    color: var(--txt-secondary);
+}
+
+.announcementItem>h3 {
+    color: var(--txt-primary);
+}
+
+.announcementItem:first-child {
+    padding-top: 0;
+}
+
+.announcementItem:last-child {
+    border-bottom: none;
 }
 
 .trendingContainer {
@@ -211,6 +267,7 @@ hr.dashed {
     text-align: center;
     overflow: hidden;
     padding: 0.25em;
+    background-color: var(--bg-seconday);
 }
 
 #githubLogo {
@@ -220,4 +277,23 @@ hr.dashed {
 
 p {
     font-size: 1.25rem;
+    color: var(--txt-secondary);
+}
+
+/* hover states */
+
+.project:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--border-secondary);
+}
+
+.sidebarItem:hover {
+    background-color: var(--sidebar-item-hover);
+    color: var(--txt-primary);
+    cursor: default;
+}
+
+.sidebarItem.active {
+    background-color: var(--sidebar-item-active);
+    color: var(--txt-primary);
 }
