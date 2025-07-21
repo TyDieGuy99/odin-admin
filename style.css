@@ -58,7 +58,8 @@ body {
 .searchbar,
 .userInfo,
 .helloMessage,
-.buttons {
+.buttons,
+.theme {
     display: flex;
     align-items: center;
 }
@@ -69,12 +70,13 @@ body {
 
 input {
     border-radius: 45px;
-    width: 50em;
+    width: 100%;
     height: 3em;
-    font-size: 18px;
+    padding: 12px 20px;
     background-color: var(--bg-teritary);
     border: 1px solid var(--border-primary);
     color: var(--txt-primary);
+    font-size: 1.15rem;
 }
 
 input:focus {
@@ -83,7 +85,7 @@ input:focus {
     transition: 0.2s;
 }
 
-#iconNoto {
+#iconClick {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
@@ -312,6 +314,6 @@ button:hover {
     background-color: #0284c7;
 }
 
-#iconNoto:hover {
+#iconClick:hover {
     transform: scale(1.25);
 }
