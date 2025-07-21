@@ -40,6 +40,10 @@ body {
     height: 100%;
 }
 
+.icon {
+    filter: invert(1);
+}
+
 .header {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -131,7 +135,7 @@ button:hover {
 .sidebar {
     grid-row: 1 / 4;
     display: grid;
-    grid-template-rows: 0.3fr minmax(25px, 30px) repeat(6, minmax(50px, 100px)) minmax(25px, 30px) repeat(3, minmax(50px, 100px));
+    grid-template-rows: 0.3fr repeat(9, minmax(75px, 100px));
     background-color: var(--sidebar-bg);
 }
 
@@ -139,11 +143,12 @@ button:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 1em;
+    padding-left: 2em;
     padding-right: 5em;
     gap: 2em;
     color: var(--txt-secondary);
     font-size: 12px;
+    transition: transform 0.15s ease-in-out;
 }
 
 hr.dashed {
@@ -290,7 +295,8 @@ p {
 .sidebarItem:hover {
     background-color: var(--sidebar-item-hover);
     color: var(--txt-primary);
-    cursor: default;
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .sidebarItem.active {
