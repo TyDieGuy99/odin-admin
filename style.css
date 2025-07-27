@@ -157,6 +157,19 @@ button {
     transition: transform 0.15s ease-in-out;
 }
 
+.sidebarItemActive {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 5em;
+    gap: 2em;
+    background-color: var(--sidebar-item-active);
+    color: var(--txt-primary);
+    font-size: 12px;
+    cursor: default;
+}
+
 hr.dashed {
     border-top: 3px dashed black;
     border-bottom: none;
@@ -284,6 +297,8 @@ hr.dashed {
 #githubLogo {
     max-height: 100%;
     object-fit: contain;
+    filter: invert(1);
+    transition: 0.2s;
 }
 
 p {
@@ -305,15 +320,53 @@ p {
     transform: scale(1.05);
 }
 
-.sidebarItem.active {
-    background-color: var(--sidebar-item-active);
-    color: var(--txt-primary);
-}
-
 button:hover {
     background-color: #0284c7;
 }
 
-#iconClick:hover {
+#iconClick:hover,
+#githubLogo:hover {
     transform: scale(1.25);
+}
+
+/* tooltips */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltipText {
+    visibility: hidden;
+    width: 70px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -71%;
+
+    opacity: 0;
+    transition: opacity 0.65s;
+}
+
+.tooltip .tooltipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
 }
