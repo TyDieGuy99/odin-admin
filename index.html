@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 </head>
 <body>
     <div id="container">
@@ -14,19 +15,19 @@
                 <input type="text">
             </div>
             <div class="userInfo">
-                <img src="icons/weather-sunny.svg" alt="Press to turn into lightmode" style="width:50px;height:50px;" class="icon" id="iconClick">
-                <img src="icons/weather-night.svg" alt="Press to turn into darkmode" style="width:50px;height:50px;" class="icon" id="iconClick"> 
+                <img src="icons/weather-sunny.svg" alt="Press to turn into lightmode" style="width:50px;height:50px;" class="icon" class="theme-toggle" id="iconClick">
+                <img src="icons/weather-night.svg" alt="Press to turn into darkmode" style="width:50px;height:50px;" class="icon" class="theme-toggle" id="iconClick"> 
                 <img src="icons/bell-ring.svg" alt="Notofications icon" style="width:50px;height:50px;" class="icon" id="iconClick">
                 <div class="pfpWrapper">
-                    <img src="photos/luffy.jpg" alt="this is user icon" class="pfp">
+                    <img src="photos/panda.jpg" alt="this is user icon" class="pfp">
                 </div>
-                <h3>Monkey D. Luffy</h3>
+                <h3>Tyler D. S</h3>
             </div>
             <div class="helloMessage">
                 <div class="pfpWrapper">
-                    <img src="photos/luffy.jpg" alt="this is user icon" class="pfp">
+                    <img src="photos/panda.jpg" alt="this is user icon" class="pfp">
                 </div>
-                <h3>Hey there,<br>Luffy (@StrawHat)</h3>
+                <h3>Hey there,<br>Tyler (@TyDieGuy99)</h3>
             </div>
             <div class="buttons">
                 <button type="button">New</button>
@@ -35,7 +36,7 @@
             </div>
         </div>
         <div class="sidebar">
-            <div class="sidebarItem active">
+            <div class="sidebarItemActive">
                 <img src="icons/view-dashboard.svg" alt="Dashboard icon" style="width:50px;height:50px;" class="icon">
                 <h1>Dashboard</h1>
             </div>
@@ -84,54 +85,108 @@
                         <h2>Signup Page</h2>
                         <p>Demonstration of intermeddiate HTML and CSS to create a signup page.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-signup/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
                         <h2>Calculator</h2>
                         <p>Basic calculator that can use negatives and the four basic operations.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-calculator/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
                         <h2>Etch-A-Sketch</h2>
                         <p>Etch-A-Sketch that has the features to change between color and black, change grid size, and has an oppacity effect that can be turned on or off.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-etch-a-sketch/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
                         <h2>Rock, Paper, Scissors!</h2>
                         <p>First JavaScript project to create a rock paper scissors game with ability to repeat games and select amount of rounds to play within a range.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-rps/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
                         <h2>Landing Page</h2>
                         <p>Use of flexbox and basic HTML and CSS to set up an example landing page for a website.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-landing-page/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project">
                         <h2>Recipie Page</h2>
                         <p>Very basic demonstration of HTML and CSS.</p>
                         <div class="links">
-                            <img src="icons/star-plus-outline.svg" alt="img1" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/eye-plus-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon">
-                            <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon">
+                            <div class="tooltip">
+                                <img src="icons/star-plus-outline.svg" onclick="this.src='icons/star-check-outline.svg'" alt="img1" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Favorite</span>
+                            </div>
+                            <div class="tooltip">
+                                <a href="https://tydieguy99.github.io/odin-recipes/" target="_blank"><img src="icons/eye-outline.svg" alt="img2" style="width:50px;height:50px;" class="icon" id="iconClick"></a>
+                                <span class="tooltipText">View</span>
+                            </div>  
+                            <div class="tooltip">
+                                <img src="icons/share-variant-outline.svg" alt="img3" style="width:50px;height:50px;" class="icon" id="iconClick">
+                                <span class="tooltipText">Share</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,25 +213,25 @@
                     <h1>Trending</h1>
                     <div class="trendingContainer">
                             <div class="pfpWrapper">
-                                <img src="photos/zoro.jpg" alt="this is user icon" class="pfp">
+                                <img src="photos/frog.jpg" alt="this is user icon" class="pfp">
                             </div>
-                            <h3>@zoro</h3>
-                            <p>King of Hell</p>
+                            <h3>@ryan</h3>
+                            <p>Lead Coder</p>
                             <div class="pfpWrapper">
-                                <img src="photos/law.jpg" alt="this is user icon" class="pfp">
+                                <img src="photos/bulbasaur.jpg" alt="this is user icon" class="pfp">
                             </div>
-                            <h3>@law</h3>
-                            <p>Surgeon of Death</p>
+                            <h3>@TED</h3>
+                            <p>Lighting Designer</p>
                             <div class="pfpWrapper">
-                                <img src="photos/doflamingo.jpg" alt="this is user icon" class="pfp">
+                                <img src="photos/hockey.jpg" alt="this is user icon" class="pfp">
                             </div>
-                            <h3>@doflamingo</h3>
-                            <p>Joker</p>
+                            <h3>@connor</h3>
+                            <p>3d Artist</p>
                             <div class="pfpWrapper">
-                                <img src="photos/dugong.jpg" alt="this is user icon" class="pfp">
+                                <img src="photos/panda.jpg" alt="this is user icon" class="pfp">
                             </div>
-                            <h3>@dugong</h3>
-                            <p>Kung Fu Master</p>
+                            <h3>@tyler</h3>
+                            <p>Project Designer</p>
                     </div>
                 </div>
             </div>
